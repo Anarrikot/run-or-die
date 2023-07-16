@@ -7,6 +7,7 @@ public class Enemy_box : MonoBehaviour
     public float speed;
     public GameObject bullet;
     private float time;
+    public float time_delay_attack;
 
     private void Awake()
     {
@@ -23,7 +24,7 @@ public class Enemy_box : MonoBehaviour
         if (collision.tag == "Player")
         {
             Run(collision);
-            if (time > 2.0f)
+            if (time > time_delay_attack)
             {
                 time = 0.0f;
                 Shoot();
@@ -36,7 +37,7 @@ public class Enemy_box : MonoBehaviour
         if (collision.tag == "Player")
         {
             Run(collision);
-            if (time > 2.0f)
+            if (time > time_delay_attack)
             {
                 time = 0.0f;
                 Shoot();

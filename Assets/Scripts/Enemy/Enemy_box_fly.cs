@@ -7,6 +7,7 @@ public class Enemy_box_fly : MonoBehaviour
     public new Rigidbody2D rigidbody;
     public float speed;
     public GameObject bomb;
+    public float time_delay_attack;
 
     void Start()
     {
@@ -30,7 +31,7 @@ public class Enemy_box_fly : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(0.75f);
+            yield return new WaitForSeconds(time_delay_attack);
             Shoot();
         }
     }

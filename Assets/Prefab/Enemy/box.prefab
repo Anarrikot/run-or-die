@@ -197,4 +197,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rigidbody: {fileID: 0}
   speed: 1
-  bullet: {fileID: 0}
+  bullet: {fileID: 1596104417491640729, guid: da11a2dbdad02d2448412a887a089f84, type: 3}
+  time_delay_attack: 2

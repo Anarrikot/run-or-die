@@ -149,3 +149,4 @@ MonoBehaviour:
   rigidbody: {fileID: 0}
   speed: 4
   bomb: {fileID: 1596104417491640729, guid: 91917f6308294ae43bacae8461519663, type: 3}
+  time_delay_attack: 0.75

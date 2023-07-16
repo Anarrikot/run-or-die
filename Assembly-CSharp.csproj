@@ -64,6 +64,8 @@
     <Compile Include="Assets\Scripts\Enemy\bomb_move.cs" />
     <Compile Include="Assets\Scripts\Enemy\Enemy_box_fly.cs" />
     <Compile Include="Assets\Scripts\Map\Finish.cs" />
+    <Compile Include="Assets\Scripts\Enemy\Canon.cs" />
+    <Compile Include="Assets\Scripts\Enemy\Canon_bullet.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

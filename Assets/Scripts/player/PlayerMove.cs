@@ -34,7 +34,6 @@ public class PlayerMove : MonoBehaviour
     void Update()
     {
         time += Time.deltaTime;
-        CheckingGround();
         if (Input.GetKey(KeyCode.D))
         {
             rigidbody.velocity = new Vector2(speed, rigidbody.velocity.y);
@@ -63,9 +62,20 @@ public class PlayerMove : MonoBehaviour
         }
     }
 
-    void CheckingGround()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        isJump = Physics2D.OverlapCircle(GroundCheck.position, checkRodius, Ground);
+        if (collision.tag == "Ground")
+        {
+            isJump = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.tag == "Ground")
+        {
+            isJump = false;
+        }
     }
 
     public void Shoot()
