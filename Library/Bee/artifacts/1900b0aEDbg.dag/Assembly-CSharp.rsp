@@ -352,6 +352,7 @@
 -r:"Library/Bee/artifacts/1900b0aEDbg.dag/UnityEngine.SpatialTracking.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aEDbg.dag/UnityEngine.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aEDbg.dag/UnityEngine.XR.LegacyInputHelpers.ref.dll"
+"Assets/Scripts/Core/Menu.cs"
 "Assets/Scripts/Enemy/bomb_move.cs"
 "Assets/Scripts/Enemy/bullet_move.cs"
 "Assets/Scripts/Enemy/Canon.cs"
@@ -361,7 +362,9 @@
 "Assets/Scripts/Enemy/Enemy_box_fly.cs"
 "Assets/Scripts/Map/Finish.cs"
 "Assets/Scripts/player/Bullet_player.cs"
+"Assets/Scripts/player/PlayerInfo.cs"
 "Assets/Scripts/player/PlayerMove.cs"
+"Assets/Scripts/player/Weapon.cs"
 -langversion:9.0
 
 /deterministic
