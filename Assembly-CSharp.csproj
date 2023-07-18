@@ -58,17 +58,17 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\player\PlayerMove.cs" />
     <Compile Include="Assets\Scripts\Enemy\Enemy.cs" />
+    <Compile Include="Assets\Scripts\player\Weapon.cs" />
+    <Compile Include="Assets\Scripts\player\PlayerInfo.cs" />
     <Compile Include="Assets\Scripts\Enemy\Canon_bullet.cs" />
     <Compile Include="Assets\Scripts\Enemy\bullet_move.cs" />
+    <Compile Include="Assets\Scripts\Core\Menu.cs" />
     <Compile Include="Assets\Scripts\Enemy\Canon.cs" />
     <Compile Include="Assets\Scripts\player\Bullet_player.cs" />
     <Compile Include="Assets\Scripts\Enemy\Enemy_box.cs" />
     <Compile Include="Assets\Scripts\Enemy\bomb_move.cs" />
     <Compile Include="Assets\Scripts\Enemy\Enemy_box_fly.cs" />
     <Compile Include="Assets\Scripts\Map\Finish.cs" />
-    <Compile Include="Assets\Scripts\player\PlayerInfo.cs" />
-    <Compile Include="Assets\Scripts\player\Weapon.cs" />
-    <Compile Include="Assets\Scripts\Core\Menu.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

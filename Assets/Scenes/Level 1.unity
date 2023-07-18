@@ -1578,6 +1578,11 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!1 &1673124785 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4998275437463075053, guid: d17eb284f356161489efc2370172b26f, type: 3}
+  m_PrefabInstance: {fileID: 3747382837225495442}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1816492647
 GameObject:
   m_ObjectHideFlags: 0
@@ -1994,6 +1999,10 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3747382837723177248, guid: d17eb284f356161489efc2370172b26f, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3747382837723177248, guid: d17eb284f356161489efc2370172b26f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.64
       objectReference: {fileID: 0}
@@ -2037,9 +2046,29 @@ PrefabInstance:
       propertyPath: bullet
       value: 
       objectReference: {fileID: 1596104417491640729, guid: 609c0f199b4507c4a8368d4cbbc1a294, type: 3}
+    - target: {fileID: 3747382837723177249, guid: d17eb284f356161489efc2370172b26f, type: 3}
+      propertyPath: weapon
+      value: 
+      objectReference: {fileID: 1673124785}
     - target: {fileID: 3747382837723177277, guid: d17eb284f356161489efc2370172b26f, type: 3}
       propertyPath: m_Name
       value: Square
+      objectReference: {fileID: 0}
+    - target: {fileID: 3823479956036345887, guid: d17eb284f356161489efc2370172b26f, type: 3}
+      propertyPath: m_Size.x
+      value: 1.0666667
+      objectReference: {fileID: 0}
+    - target: {fileID: 3823479956036345887, guid: d17eb284f356161489efc2370172b26f, type: 3}
+      propertyPath: m_Size.y
+      value: 1.0666667
+      objectReference: {fileID: 0}
+    - target: {fileID: 3823479956036345887, guid: d17eb284f356161489efc2370172b26f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f927099948103ba4c96512f8429699f5, type: 3}
+    - target: {fileID: 3823479956036345887, guid: d17eb284f356161489efc2370172b26f, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d17eb284f356161489efc2370172b26f, type: 3}

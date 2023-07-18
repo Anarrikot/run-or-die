@@ -148,17 +148,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 135736866}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: -0.38268343, w: 0.92387956}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 761783864}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.75000006, y: 0.5}
-  m_AnchorMax: {x: 0.75000006, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -45}
+  m_AnchorMin: {x: 0.63000005, y: 0.5}
+  m_AnchorMax: {x: 0.63000005, y: 0.5}
+  m_AnchoredPosition: {x: 1.8, y: 0}
   m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &135736868
@@ -211,8 +211,9 @@ GameObject:
   - component: {fileID: 138397702}
   - component: {fileID: 138397701}
   - component: {fileID: 138397700}
+  - component: {fileID: 138397703}
   m_Layer: 5
-  m_Name: weapon_2
+  m_Name: crossbow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -283,7 +284,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 138397701}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1065027084}
+        m_TargetAssemblyTypeName: Menu, Assembly-CSharp
+        m_MethodName: onClick
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 138397700}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: crossbow
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &138397701
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -322,6 +335,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 138397698}
   m_CullTransparentMesh: 1
+--- !u!114 &138397703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 138397698}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 1, g: 1, b: 0, a: 1}
+  m_EffectDistance: {x: 3, y: 3}
+  m_UseGraphicAlpha: 1
 --- !u!1 &201368659
 GameObject:
   m_ObjectHideFlags: 0
@@ -655,8 +683,9 @@ GameObject:
   - component: {fileID: 305035385}
   - component: {fileID: 305035384}
   - component: {fileID: 305035383}
+  - component: {fileID: 305035386}
   m_Layer: 5
-  m_Name: weapon_5
+  m_Name: rocket_launcher
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -727,7 +756,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 305035384}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1065027084}
+        m_TargetAssemblyTypeName: Menu, Assembly-CSharp
+        m_MethodName: onClick
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 305035383}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: rocket_launcher
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &305035384
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -766,6 +807,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 305035381}
   m_CullTransparentMesh: 1
+--- !u!114 &305035386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 305035381}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 1, g: 1, b: 0, a: 1}
+  m_EffectDistance: {x: 3, y: 3}
+  m_UseGraphicAlpha: 1
 --- !u!1 &555376621
 GameObject:
   m_ObjectHideFlags: 0
@@ -1439,6 +1495,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activeWeapon: {fileID: 135736868}
+  prevButton: {fileID: 2032478117}
 --- !u!1 &1258686262
 GameObject:
   m_ObjectHideFlags: 0
@@ -1931,8 +1988,9 @@ GameObject:
   - component: {fileID: 1846703760}
   - component: {fileID: 1846703759}
   - component: {fileID: 1846703758}
+  - component: {fileID: 1846703761}
   m_Layer: 5
-  m_Name: weapon_4
+  m_Name: machine_gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2003,7 +2061,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1846703759}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1065027084}
+        m_TargetAssemblyTypeName: Menu, Assembly-CSharp
+        m_MethodName: onClick
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1846703758}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: machine_gun
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1846703759
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2042,6 +2112,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1846703756}
   m_CullTransparentMesh: 1
+--- !u!114 &1846703761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1846703756}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 1, g: 1, b: 0, a: 1}
+  m_EffectDistance: {x: 3, y: 3}
+  m_UseGraphicAlpha: 1
 --- !u!1 &1901330982
 GameObject:
   m_ObjectHideFlags: 0
@@ -2067,14 +2152,14 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1901330982}
-  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 138397699}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -99.3, y: -0.000015258789}
@@ -2100,7 +2185,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 7297a41a07d65654cafec80f863cb52d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 681539d983cf1214484260e3f060b8c2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2130,8 +2215,9 @@ GameObject:
   - component: {fileID: 1901796070}
   - component: {fileID: 1901796069}
   - component: {fileID: 1901796068}
+  - component: {fileID: 1901796071}
   m_Layer: 5
-  m_Name: weapon_3
+  m_Name: pistol
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2202,7 +2288,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1901796069}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1065027084}
+        m_TargetAssemblyTypeName: Menu, Assembly-CSharp
+        m_MethodName: onClick
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1901796068}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: pistol
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1901796069
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2241,6 +2339,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1901796066}
   m_CullTransparentMesh: 1
+--- !u!114 &1901796071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1901796066}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 1, g: 1, b: 0, a: 1}
+  m_EffectDistance: {x: 3, y: 3}
+  m_UseGraphicAlpha: 1
 --- !u!1 &1936155448
 GameObject:
   m_ObjectHideFlags: 0
@@ -2333,8 +2446,9 @@ GameObject:
   - component: {fileID: 2032478119}
   - component: {fileID: 2032478118}
   - component: {fileID: 2032478117}
+  - component: {fileID: 2032478120}
   m_Layer: 5
-  m_Name: weapon_1
+  m_Name: bow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2405,7 +2519,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2032478118}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1065027084}
+        m_TargetAssemblyTypeName: Menu, Assembly-CSharp
+        m_MethodName: onClick
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2032478117}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: bow
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2032478118
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2444,6 +2570,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2032478115}
   m_CullTransparentMesh: 1
+--- !u!114 &2032478120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2032478115}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 1, g: 1, b: 0, a: 1}
+  m_EffectDistance: {x: 3, y: 3}
+  m_UseGraphicAlpha: 1
 --- !u!1 &2078211729
 GameObject:
   m_ObjectHideFlags: 0

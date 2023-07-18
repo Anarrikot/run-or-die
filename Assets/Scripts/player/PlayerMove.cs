@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -7,11 +8,9 @@ public class PlayerMove : MonoBehaviour
     public new Rigidbody2D rigidbody;
     public float speed;
     public float jump;
+    public GameObject weapon;
 
     private bool isJump;
-    public Transform GroundCheck;
-    private float checkRodius = 0.1f;
-    public LayerMask Ground;
 
     public GameObject bullet;
     private float time;
@@ -29,6 +28,7 @@ public class PlayerMove : MonoBehaviour
     void Awake()
     {
         rigidbody = GetComponent<Rigidbody2D>();
+        weapon.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Weapon/" + Convert.ToString(PlayerInfo.Instance.ActiveWeapon()));
     }
 
     void Update()
@@ -37,11 +37,13 @@ public class PlayerMove : MonoBehaviour
         if (Input.GetKey(KeyCode.D))
         {
             rigidbody.velocity = new Vector2(speed, rigidbody.velocity.y);
+            transform.localScale = new Vector3(1, 1, 1);
             directionIsRigth = true;
         }
         else if (Input.GetKey(KeyCode.A))
         {
             rigidbody.velocity = new Vector2(-speed, rigidbody.velocity.y);
+            transform.localScale = new Vector3(-1, 1, 1);
             directionIsRigth = false;
         }
         else
@@ -64,7 +66,7 @@ public class PlayerMove : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Ground")
+        if (collision.CompareTag("Ground"))
         {
             isJump = true;
         }
@@ -72,7 +74,7 @@ public class PlayerMove : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.tag == "Ground")
+        if (collision.CompareTag("Ground"))
         {
             isJump = false;
         }
